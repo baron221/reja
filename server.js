@@ -26,9 +26,7 @@ app.set("views", "views");
 app.set("view engine","ejs");
 
 //4 routerlarga moljallangan  ,Routin codlar
-app.post("/create-item",(req,res)=>{
-    
-});
+
 
 app.get("/author",function(req,res){
     res.render("author",{user:user})
