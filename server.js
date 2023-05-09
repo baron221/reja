@@ -1,7 +1,18 @@
 console.log("Web Server boshlash");
 const express = require("express");
 const app = express() ;
-const http =require("http")
+const http =require("http");
+const fs =require("fs");
+
+
+let user;
+fs.readFile("database/user.json","utf8",(err,data)=>{
+    if(err){
+        console.log("ERROR: ", err);
+    }else{
+        user =JSON.parse(data)
+    }
+})
 
 // 1 express ga kirib kelyatgan malumotlarga bogliq bolgan kodlar yoziladi. KIRISH kodlari
 app.use(express.static("public"));
@@ -15,14 +26,19 @@ app.set("views", "views");
 app.set("view engine","ejs");
 
 //4 routerlarga moljallangan  ,Routin codlar
+app.post("/create-item",(req,res)=>{
+    
+});
+
+app.get("/author",function(req,res){
+    res.render("author",{user:user})
+});
 
 app.get("/",function(req,res){
-    res.end(`<h1 style="background:green">"HELLO WORLD"</h1>`)
+    res.render("harid")
 });
 
-app.get("/hello",function(req,res){
-    res.end(`<h1 style="background:yellow">"Salom bolimi"</h1>`)
-});
+
 const server = http.createServer(app);
 let PORT = 3000;
 server.listen(PORT , function(){
