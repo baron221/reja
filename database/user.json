@@ -1,8 +1,9 @@
 {
-    "name":"Steve",
+    "name":"Baron",
     "profession":"Software Engineer",
-    "age":20,
+    "age":"27",
     "residence":"S.Korea",
+    "freelance":"Available",
     "adress":"S.Korea,Busan",
     "languages":["Uzbek","Korean","English"],
     "skills":["Html","Css","Js","NodeJS","Python"],
