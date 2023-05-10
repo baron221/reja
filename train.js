@@ -69,21 +69,21 @@ console.log("passed here 1")
  
 //    }
 // }
-// console.log("passed here 0")
-// maslahatBering(105)
-// .then((data)=>{
-//     console.log('javob',data)
-// }).catch((err)=>{
-//     console.log("ERROR:", err)
-// });
-// console.log("passed here 1")
+console.log("passed here 0")
+maslahatBering(105)
+.then((data)=>{
+    console.log('javob',data)
+}).catch((err)=>{
+    console.log("ERROR:", err)
+});
+console.log("passed here 1")
 
-//async /await
+async /await
 
-// async function run(){
-//     let answer =await maslahatBering(65);
-//     console.log(answer);
+async function run(){
+    let answer =await maslahatBering(65);
+    console.log(answer);
 
-// }
+}
 
-// run()
+run()
