@@ -33,3 +33,23 @@ document
     })
 
 })
+
+document.addEventListener("click",function(e){
+   //delete
+    if(e.target.classList.contains("delete-me")){
+        if(confirm("Aniq o'chirmoqchimisiz?")){
+            axios.post("/delete-item",{id:e.target.getAttribute("data-id")})
+            .then((respose)=>{
+                console.log(respose.data);
+                e.target.parentElement.parentElement.remove()
+            })
+            .catch((err) => {
+                console.log("Qaytadan harakat qiling")   
+            });
+        }
+    }
+  
+    //edit
+    if(e.target.classList.contains("edit-me")){
+    }
+});
